@@ -1,4 +1,4 @@
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore} from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 
 // Web app's Firebase configuration

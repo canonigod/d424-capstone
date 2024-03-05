@@ -1,12 +1,12 @@
 // RecipeList.js
 import React from 'react';
-import RecipeCard from './RecipeCard';
+import RecipeReport from './RecipeReport';
 
 const RecipeList = ({ recipes }) => {
   return (
-    <div>
+    <div className='recipe-card'>
       {recipes.map(recipe => (
-        <RecipeCard key={recipe.id} recipe={recipe} />
+        <RecipeReport key={recipe.id} recipe={recipe} />
       ))}
     </div>
   );
