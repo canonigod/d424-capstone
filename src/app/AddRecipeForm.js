@@ -16,7 +16,7 @@ const AddRecipeForm = ({ addDoc, colRef, serverTimestamp }) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value.trim(), // Trim whitespace
+      [name]: value, // Trim whitespace
     });
   };
 
@@ -51,6 +51,7 @@ const AddRecipeForm = ({ addDoc, colRef, serverTimestamp }) => {
       await addDoc((colRef), {
         ...formData,
         ingredients: ingredientsArray,
+        updated_at: serverTimestamp(),
         created_at: serverTimestamp(),
       });
 
